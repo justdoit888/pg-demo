@@ -5,6 +5,8 @@ import java.sql.*;
 public class JdbcApplication {
 
     public static void main(String[] args) {
+
+        //所有处理数据库相关的都是如下几步，都采用的jdbc技术
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
@@ -19,6 +21,7 @@ public class JdbcApplication {
             preparedStatement = connection.prepareStatement(sql);
             //设置参数，第一个参数为 sql 语句中参数的序号（从 1 开始），第二个参数为设置的 参数值
             preparedStatement.setLong(1, 0);
+            //preparedStatement.setString(2, "sunjz");
             //向数据库发出 sql 执行查询，查询出结果集
             resultSet =  preparedStatement.executeQuery();
             //遍历查询结果集

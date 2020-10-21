@@ -14,7 +14,7 @@ public class MybatisApplication {
     public static void main(String[] args) throws Exception{
         //1.读取配置文件
         InputStream in = Resources.getResourceAsStream("SqlMapConfig.xml");
-        //2.创建 SqlSessionFactory 的构建者对象
+        //2.创建 SqlSessionFactory 的构建者对象  -- connection 连接工厂
         SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
         //3.使用构建者创建工厂对象 SqlSessionFactory
         SqlSessionFactory factory = builder.build(in);

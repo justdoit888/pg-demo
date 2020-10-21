@@ -84,7 +84,7 @@ public class BeanUtils {
 
     public static <S, T> List<T> copyBaseList(List<S> ss, Class<T> cls) {
 
-        List<T> tRes = new ArrayList<>();
+        List<T> tRes = new ArrayList<>(ss.size());
         try {
             for (S s : ss) {
                 tRes.add((T)s);
